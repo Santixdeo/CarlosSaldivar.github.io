@@ -1,7 +1,376 @@
-<h1> Carlos Saldivar </h1>
-<h1> Carlos Saldivar </h1>
-<h1> Carlos Saldivar </h1>
-<h1> Carlos Saldivar </h1>
-<h1> Carlos Saldivar </h1>
-<h1> Carlos Saldivar </h1>
-<h1> Carlos Saldivar </h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Carlos Saldivar | Estudiante de Ciencias de la Computación - UCSP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #f5f7fc 0%, #e9eef4 100%);
+            font-family: 'Inter', sans-serif;
+            color: #1a2c3e;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(2px);
+            border-radius: 2rem;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            margin-bottom: 2rem;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 28px 38px -16px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 2rem;
+            animation: fadeUp 0.6s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #1E3C72, #2A5298);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            letter-spacing: -0.02em;
+            font-family: 'Space Grotesk', monospace;
+        }
+
+        .hero .badge {
+            display: inline-block;
+            background: #d9e6f5;
+            padding: 0.35rem 1rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #1e4a76;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 760px;
+            margin: 0 auto;
+            color: #2c3e4e;
+            background: #f0f4fa;
+            padding: 0.8rem 1.5rem;
+            border-radius: 60px;
+            display: inline-block;
+        }
+
+        .divider {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #2a6f9c, #5fa7cf);
+            border-radius: 4px;
+            margin: 1.5rem auto;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 1.5rem 0 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #1e3a5f;
+            border-left: 5px solid #2a6f9c;
+            padding-left: 1rem;
+        }
+
+        .section-title i {
+            color: #2a6f9c;
+            font-size: 1.6rem;
+        }
+
+        .info-text {
+            background: #f8fafd;
+            padding: 1.3rem;
+            border-radius: 1.5rem;
+            margin-bottom: 1.2rem;
+            border: 1px solid #e2edf7;
+        }
+
+        .info-text p {
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .info-text i {
+            width: 28px;
+            color: #2a6f9c;
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 1rem 0;
+        }
+
+        .tag {
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            border: 1px solid #dce5f0;
+            transition: all 0.2s;
+        }
+
+        .tag i {
+            margin-right: 6px;
+        }
+
+        .tag:hover {
+            background: #eef3fc;
+            transform: scale(1.02);
+        }
+
+        .grid-2cols {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 1rem 0;
+        }
+
+        .col {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        /* Curso card */
+        .curso-card {
+            background: white;
+            border-radius: 1.2rem;
+            padding: 1.2rem;
+            margin-bottom: 1.2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border: 1px solid #e9edf2;
+            transition: 0.2s;
+        }
+        .curso-card h3 {
+            color: #1e4a76;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Profesor card */
+        .profesor-card {
+            background: white;
+            border-radius: 1.2rem;
+            padding: 1.2rem;
+            margin-bottom: 1.2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border: 1px solid #e9edf2;
+        }
+        .profesor-card h3 {
+            color: #1e3a5f;
+            margin-bottom: 0.2rem;
+        }
+        .profesor-card .cargo {
+            font-size: 0.85rem;
+            color: #2a6f9c;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        .btn-linkedin {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #0077b5;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            margin-right: 0.5rem;
+        }
+        .btn-web {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #2a6f9c;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 0.8rem;
+        }
+
+        /* Foto de perfil única */
+        .profile-photo {
+            text-align: center;
+            margin: 1rem 0 1.5rem 0;
+        }
+        .profile-photo img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1.5rem 0.5rem;
+            color: #5b6f82;
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+        .social-footer {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        .social-footer a {
+            color: #2c5a7a;
+            font-size: 1.8rem;
+            transition: 0.2s;
+        }
+        .social-footer a:hover {
+            transform: translateY(-3px);
+            color: #1e3a5f;
+        }
+        @media (max-width: 700px) {
+            .hero h1 { font-size: 2.3rem; }
+            .section-title { font-size: 1.5rem; }
+            .profile-photo img { width: 150px; height: 150px; }
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(18px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .card, .hero { animation: fadeUp 0.6s ease-out; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Presentación principal -->
+    <div class="hero">
+        <div class="badge"><i class="fas fa-laptop-code"></i> Estudiante de Ciencias de la Computación | UCSP</div>
+        <h1>Carlos Saldivar</h1>
+        <p>Carlos Santiago Saldivar Quispe · Universidad Católica San Pablo (UCSP) · Arequipa, Perú</p>
+        <div class="divider"></div>
+    </div>
+
+    <!-- Tarjeta principal con foto única y descripción -->
+    <div class="card">
+        <div class="section-title"><i class="fas fa-user-graduate"></i> Sobre mí</div>
+        
+        <!-- Foto única -->
+        <div class="profile-photo">
+            <img src="mi_foto.jpg" alt="Carlos Saldivar" onerror="this.src='https://picsum.photos/id/20/200/200'">
+            <p style="font-size:0.7rem; margin-top:0.5rem; color:#5b6f82;">(Reemplaza "mi_foto.jpg" por el nombre de tu archivo de imagen)</p>
+        </div>
+
+        <div class="info-text">
+            <p><i class="fas fa-graduation-cap"></i> <strong>Estudiante de Ciencia de la Computación</strong> – Universidad Católica San Pablo (UCSP)</p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Ubicación:</strong> Arequipa, Perú</p>
+            <p><i class="fas fa-calendar-alt"></i> <strong>Semestre actual:</strong> Primer semestre</p>
+            <p><i class="fas fa-envelope"></i> <strong>Contacto:</strong> carlos.saldivar@ucsp.edu.pe</p>
+            <p><i class="fas fa-code"></i> Apasionado por la ciberseguridad, el desarrollo de software y las tecnologías emergentes. Disfruto el fútbol, la tecnología y la música como parte de mi día a día.</p>
+        </div>
+        <div class="tag-list">
+            <span class="tag"><i class="fab fa-python"></i> Python</span>
+            <span class="tag"><i class="fas fa-shield-alt"></i> Ciberseguridad</span>
+            <span class="tag"><i class="fab fa-linux"></i> Linux</span>
+            <span class="tag"><i class="fas fa-futbol"></i> Fútbol</span>
+        </div>
+    </div>
+
+    <!-- Cursos de la carrera (sin códigos, con Lógica y Humanidades/Filosofía) -->
+    <div class="card">
+        <div class="section-title"><i class="fas fa-book-open"></i> Cursos clave de la carrera</div>
+        <p style="margin-bottom: 1rem;">Malla curricular basada en lineamientos internacionales de ACM e IEEE.</p>
+        <div class="grid-2cols">
+            <div class="col">
+                <div class="curso-card">
+                    <h3>Introducción a la Computación</h3>
+                    <p>Estudio global de la disciplina desde una perspectiva científica. Abarca el pensamiento computacional, el funcionamiento elemental de los sistemas y los fundamentos de la teoría de la información.</p>
+                </div>
+                <div class="curso-card">
+                    <h3>Fundamentos de Programación</h3>
+                    <p>Introducción a la resolución de problemas estructurados mediante código. Diseño de algoritmos y programación con lenguajes de alto nivel, enfocado en buenas prácticas.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="curso-card">
+                    <h3>Lógica</h3>
+                    <p>Estudio de los principios del razonamiento válido, sistemas formales, lógica proposicional y de predicados. Aplicaciones fundamentales en la ciencia de la computación.</p>
+                </div>
+                <div class="curso-card">
+                    <h3>Humanidades / Filosofía</h3>
+                    <p>Exploración del pensamiento crítico, ética, argumentación y grandes corrientes filosóficas. Desarrollo de una visión integral del ser humano y su relación con la tecnología.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profesores destacados (con los enlaces de LinkedIn proporcionados) -->
+    <div class="card">
+        <div class="section-title"><i class="fas fa-chalkboard-teacher"></i> Profesores de la Carrera</div>
+        <p style="margin-bottom: 1rem;">La UCSP destaca por docentes pioneros e investigadores de amplio reconocimiento académico.</p>
+        <div class="grid-2cols">
+            <div class="col">
+                <div class="profesor-card">
+                    <h3>Dr. Ernesto Cuadros Vargas</h3>
+                    <div class="cargo">Docente Principal e Investigador de Especialidad</div>
+                    <p>PhD por la USP (Brasil), único representante latinoamericano en el comité de la ACM/IEEE para el diseño del Currículo Mundial de Computación. Especialidad: Algoritmos, Estructuras de Datos Espaciales e Indización.</p>
+                    <a href="https://www.linkedin.com/in/ecuadrosv/" target="_blank" class="btn-linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="profesor-card">
+                    <h3>Mg. Kelly Vizconde La Motta</h3>
+                    <div class="cargo">Docente de Especialidad e Investigadora UCSP</div>
+                    <p>Especialista en desarrollo de capacidades algorítmicas fundamentales. Dicta con excelencia y vocación pedagógica cursos clave como Fundamentos de Programación y Programación Orientada a Objetos.</p>
+                    <a href="https://www.linkedin.com/in/kelly-vizconde-la-motta-3a57a4143/" target="_blank" class="btn-linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer con redes sociales al final -->
+    <footer>
+        <p><i class="far fa-copyright"></i> Carlos Santiago Saldivar Quispe · Ciencias de la Computación · Universidad Católica San Pablo</p>
+        <div class="social-footer">
+            <a href="https://www.tiktok.com/@santixdeo" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/aesantap/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://open.spotify.com/user/31pmh7rwtlvzi3j5beef6g3jgadq" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a>
+        </div>
+        <p style="font-size: 0.75rem; margin-top: 1rem;">⚽ Fútbol · 💻 Tecnología · 🎵 Música · 🔒 Ciberseguridad</p>
+    </footer>
+</div>
+</body>
+</html>
