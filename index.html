@@ -14,9 +14,9 @@
         }
 
         body {
-            background: linear-gradient(145deg, #f5f7fc 0%, #e9eef4 100%);
+            background: linear-gradient(135deg, #0a0a0f 0%, #12121a 100%);
             font-family: 'Inter', sans-serif;
-            color: #1a2c3e;
+            color: #e0e0e0;
             line-height: 1.5;
             scroll-behavior: smooth;
         }
@@ -28,19 +28,20 @@
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.94);
-            backdrop-filter: blur(2px);
+            background: rgba(20, 20, 30, 0.85);
+            backdrop-filter: blur(8px);
             border-radius: 2rem;
-            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.5);
             padding: 2rem;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
-            border: 1px solid rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(212, 175, 55, 0.2);
             margin-bottom: 2rem;
         }
 
         .card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 28px 38px -16px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 28px 38px -16px rgba(0, 0, 0, 0.6);
+            border-color: rgba(212, 175, 55, 0.5);
         }
 
         .hero {
@@ -52,7 +53,7 @@
         .hero h1 {
             font-size: 3.4rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #1E3C72, #2A5298);
+            background: linear-gradient(135deg, #d4af37, #f5e7a3);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
@@ -62,30 +63,32 @@
 
         .hero .badge {
             display: inline-block;
-            background: #d9e6f5;
+            background: rgba(212, 175, 55, 0.15);
             padding: 0.35rem 1rem;
             border-radius: 40px;
             font-size: 0.85rem;
             font-weight: 600;
-            color: #1e4a76;
+            color: #d4af37;
             margin-bottom: 1rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
         }
 
         .hero p {
             font-size: 1.2rem;
             max-width: 760px;
             margin: 0 auto;
-            color: #2c3e4e;
-            background: #f0f4fa;
+            color: #c0c0c0;
+            background: rgba(30, 30, 40, 0.7);
             padding: 0.8rem 1.5rem;
             border-radius: 60px;
             display: inline-block;
+            backdrop-filter: blur(4px);
         }
 
         .divider {
             width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, #2a6f9c, #5fa7cf);
+            height: 3px;
+            background: linear-gradient(90deg, #d4af37, #8a7430);
             border-radius: 4px;
             margin: 1.5rem auto;
         }
@@ -97,22 +100,22 @@
             display: flex;
             align-items: center;
             gap: 0.6rem;
-            color: #1e3a5f;
-            border-left: 5px solid #2a6f9c;
+            color: #d4af37;
+            border-left: 4px solid #d4af37;
             padding-left: 1rem;
         }
 
         .section-title i {
-            color: #2a6f9c;
+            color: #d4af37;
             font-size: 1.6rem;
         }
 
         .info-text {
-            background: #f8fafd;
+            background: rgba(25, 25, 35, 0.8);
             padding: 1.3rem;
             border-radius: 1.5rem;
             margin-bottom: 1.2rem;
-            border: 1px solid #e2edf7;
+            border: 1px solid rgba(212, 175, 55, 0.2);
         }
 
         .info-text p {
@@ -125,7 +128,7 @@
 
         .info-text i {
             width: 28px;
-            color: #2a6f9c;
+            color: #d4af37;
         }
 
         .tag-list {
@@ -136,21 +139,24 @@
         }
 
         .tag {
-            background: white;
+            background: rgba(30, 30, 40, 0.9);
             padding: 0.5rem 1rem;
             border-radius: 40px;
             font-weight: 500;
             font-size: 0.9rem;
-            border: 1px solid #dce5f0;
+            border: 1px solid rgba(212, 175, 55, 0.3);
             transition: all 0.2s;
+            color: #e0e0e0;
         }
 
         .tag i {
             margin-right: 6px;
+            color: #d4af37;
         }
 
         .tag:hover {
-            background: #eef3fc;
+            background: rgba(212, 175, 55, 0.15);
+            border-color: #d4af37;
             transform: scale(1.02);
         }
 
@@ -168,35 +174,41 @@
 
         /* Curso card */
         .curso-card {
-            background: white;
+            background: rgba(25, 25, 35, 0.8);
             border-radius: 1.2rem;
             padding: 1.2rem;
             margin-bottom: 1.2rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-            border: 1px solid #e9edf2;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            border: 1px solid rgba(212, 175, 55, 0.2);
             transition: 0.2s;
         }
+        .curso-card:hover {
+            border-color: rgba(212, 175, 55, 0.5);
+        }
         .curso-card h3 {
-            color: #1e4a76;
+            color: #d4af37;
             margin-bottom: 0.5rem;
         }
 
         /* Profesor card */
         .profesor-card {
-            background: white;
+            background: rgba(25, 25, 35, 0.8);
             border-radius: 1.2rem;
             padding: 1.2rem;
             margin-bottom: 1.2rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-            border: 1px solid #e9edf2;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .profesor-card:hover {
+            border-color: rgba(212, 175, 55, 0.5);
         }
         .profesor-card h3 {
-            color: #1e3a5f;
+            color: #d4af37;
             margin-bottom: 0.2rem;
         }
         .profesor-card .cargo {
             font-size: 0.85rem;
-            color: #2a6f9c;
+            color: #b8942e;
             font-weight: 500;
             margin-bottom: 0.5rem;
         }
@@ -212,6 +224,11 @@
             font-size: 0.8rem;
             margin-top: 0.5rem;
             margin-right: 0.5rem;
+            transition: 0.2s;
+        }
+        .btn-linkedin:hover {
+            background: #005f8a;
+            transform: translateY(-2px);
         }
         .btn-web {
             display: inline-flex;
@@ -231,20 +248,20 @@
             margin: 1rem 0 1.5rem 0;
         }
         .profile-photo img {
-            width: 200px;
-            height: 200px;
+            width: 220px;
+            height: 220px;
             object-fit: cover;
             border-radius: 50%;
-            border: 4px solid white;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            border: 3px solid #d4af37;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
         }
 
         footer {
             text-align: center;
             margin-top: 2rem;
             padding: 1.5rem 0.5rem;
-            color: #5b6f82;
-            border-top: 1px solid rgba(0,0,0,0.05);
+            color: #8a8a9a;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
         }
         .social-footer {
             display: flex;
@@ -254,13 +271,13 @@
             flex-wrap: wrap;
         }
         .social-footer a {
-            color: #2c5a7a;
+            color: #b8b8c8;
             font-size: 1.8rem;
             transition: 0.2s;
         }
         .social-footer a:hover {
             transform: translateY(-3px);
-            color: #1e3a5f;
+            color: #d4af37;
         }
         @media (max-width: 700px) {
             .hero h1 { font-size: 2.3rem; }
@@ -288,15 +305,15 @@
     <div class="card">
         <div class="section-title"><i class="fas fa-user-graduate"></i> Sobre mí</div>
         
-        <!-- Foto única -->
+        <!-- Foto única (YA INCLUYE TU IMAGEN) -->
         <div class="profile-photo">
-            <img src="mi_foto.jpg" alt="Carlos Saldivar" onerror="this.src='https://picsum.photos/id/20/200/200'">
-            <p style="font-size:0.7rem; margin-top:0.5rem; color:#5b6f82;">(Reemplaza "mi_foto.jpg" por el nombre de tu archivo de imagen)</p>
+            <img src="https://i.imgur.com/rJp1aYM.jpeg" alt="Carlos Saldivar - Foto de perfil">
         </div>
 
         <div class="info-text">
             <p><i class="fas fa-graduation-cap"></i> <strong>Estudiante de Ciencia de la Computación</strong> – Universidad Católica San Pablo (UCSP)</p>
             <p><i class="fas fa-map-marker-alt"></i> <strong>Ubicación:</strong> Arequipa, Perú</p>
+            <p><i class="fas fa-calendar-alt"></i> <strong>Edad:</strong> 17 años</p>
             <p><i class="fas fa-calendar-alt"></i> <strong>Semestre actual:</strong> Primer semestre</p>
             <p><i class="fas fa-envelope"></i> <strong>Contacto:</strong> carlos.saldivar@ucsp.edu.pe</p>
             <p><i class="fas fa-code"></i> Apasionado por la ciberseguridad, el desarrollo de software y las tecnologías emergentes. Disfruto el fútbol, la tecnología y la música como parte de mi día a día.</p>
@@ -309,10 +326,10 @@
         </div>
     </div>
 
-    <!-- Cursos de la carrera (sin códigos, con Lógica y Humanidades/Filosofía) -->
+    <!-- Cursos de la carrera -->
     <div class="card">
         <div class="section-title"><i class="fas fa-book-open"></i> Cursos clave de la carrera</div>
-        <p style="margin-bottom: 1rem;">Malla curricular basada en lineamientos internacionales de ACM e IEEE.</p>
+        <p style="margin-bottom: 1rem; color: #b0b0c0;">Malla curricular basada en lineamientos internacionales de ACM e IEEE.</p>
         <div class="grid-2cols">
             <div class="col">
                 <div class="curso-card">
@@ -337,10 +354,10 @@
         </div>
     </div>
 
-    <!-- Profesores destacados (con los enlaces de LinkedIn proporcionados) -->
+    <!-- Profesores destacados -->
     <div class="card">
         <div class="section-title"><i class="fas fa-chalkboard-teacher"></i> Profesores de la Carrera</div>
-        <p style="margin-bottom: 1rem;">La UCSP destaca por docentes pioneros e investigadores de amplio reconocimiento académico.</p>
+        <p style="margin-bottom: 1rem; color: #b0b0c0;">La UCSP destaca por docentes pioneros e investigadores de amplio reconocimiento académico.</p>
         <div class="grid-2cols">
             <div class="col">
                 <div class="profesor-card">
@@ -361,7 +378,7 @@
         </div>
     </div>
 
-    <!-- Footer con redes sociales al final -->
+    <!-- Footer con redes sociales -->
     <footer>
         <p><i class="far fa-copyright"></i> Carlos Santiago Saldivar Quispe · Ciencias de la Computación · Universidad Católica San Pablo</p>
         <div class="social-footer">
@@ -369,7 +386,6 @@
             <a href="https://www.instagram.com/aesantap/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="https://open.spotify.com/user/31pmh7rwtlvzi3j5beef6g3jgadq" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a>
         </div>
-        <p style="font-size: 0.75rem; margin-top: 1rem;">⚽ Fútbol · 💻 Tecnología · 🎵 Música · 🔒 Ciberseguridad</p>
     </footer>
 </div>
 </body>
