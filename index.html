@@ -160,6 +160,24 @@
             transform: scale(1.02);
         }
 
+        /* Redes sociales dentro de Sobre mí */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .social-links a {
+            color: #b8b8c8;
+            font-size: 1.8rem;
+            transition: 0.2s;
+        }
+        .social-links a:hover {
+            transform: translateY(-3px);
+            color: #d4af37;
+        }
+
         .grid-2cols {
             display: flex;
             flex-wrap: wrap;
@@ -230,17 +248,6 @@
             background: #005f8a;
             transform: translateY(-2px);
         }
-        .btn-web {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: #2a6f9c;
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-size: 0.8rem;
-        }
 
         /* Foto de perfil única */
         .profile-photo {
@@ -263,22 +270,7 @@
             color: #8a8a9a;
             border-top: 1px solid rgba(212, 175, 55, 0.2);
         }
-        .social-footer {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 1rem;
-            flex-wrap: wrap;
-        }
-        .social-footer a {
-            color: #b8b8c8;
-            font-size: 1.8rem;
-            transition: 0.2s;
-        }
-        .social-footer a:hover {
-            transform: translateY(-3px);
-            color: #d4af37;
-        }
+
         @media (max-width: 700px) {
             .hero h1 { font-size: 2.3rem; }
             .section-title { font-size: 1.5rem; }
@@ -305,7 +297,7 @@
     <div class="card">
         <div class="section-title"><i class="fas fa-user-graduate"></i> Sobre mí</div>
         
-        <!-- Foto única (YA INCLUYE TU IMAGEN) -->
+        <!-- Foto única -->
         <div class="profile-photo">
             <img src="https://i.imgur.com/rJp1aYM.jpeg" alt="Carlos Saldivar - Foto de perfil">
         </div>
@@ -318,11 +310,19 @@
             <p><i class="fas fa-envelope"></i> <strong>Contacto:</strong> carlos.saldivar@ucsp.edu.pe</p>
             <p><i class="fas fa-code"></i> Apasionado por la ciberseguridad, el desarrollo de software y las tecnologías emergentes. Disfruto el fútbol, la tecnología y la música como parte de mi día a día.</p>
         </div>
+        
         <div class="tag-list">
             <span class="tag"><i class="fab fa-python"></i> Python</span>
             <span class="tag"><i class="fas fa-shield-alt"></i> Ciberseguridad</span>
             <span class="tag"><i class="fab fa-linux"></i> Linux</span>
             <span class="tag"><i class="fas fa-futbol"></i> Fútbol</span>
+        </div>
+
+        <!-- Redes sociales dentro de Sobre mí -->
+        <div class="social-links">
+            <a href="https://www.tiktok.com/@santixdeo" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/aesantap/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://open.spotify.com/user/31pmh7rwtlvzi3j5beef6g3jgadq" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a>
         </div>
     </div>
 
@@ -378,14 +378,9 @@
         </div>
     </div>
 
-    <!-- Footer con redes sociales -->
+    <!-- Footer solo con copyright -->
     <footer>
         <p><i class="far fa-copyright"></i> Carlos Santiago Saldivar Quispe · Ciencias de la Computación · Universidad Católica San Pablo</p>
-        <div class="social-footer">
-            <a href="https://www.tiktok.com/@santixdeo" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-            <a href="https://www.instagram.com/aesantap/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://open.spotify.com/user/31pmh7rwtlvzi3j5beef6g3jgadq" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a>
-        </div>
     </footer>
 </div>
 </body>
