@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Carlos Saldivar | Estudiante de Ciencias de la Computación - UCSP</title>
+    <title>Carlos Saldivar | Estudiante de Ciencia de la Computación - UCSP</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -178,12 +178,18 @@
             color: #d4af37;
         }
 
-        /* Enlace de LinkedIn más destacado */
-        .btn-linkedin-profile {
+        /* Enlaces de perfil destacados (LinkedIn y GitHub) */
+        .profile-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 0.5rem 0 1rem 0;
+        }
+        .btn-profile {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: #0077b5;
             color: white;
             padding: 0.5rem 1.2rem;
             border-radius: 30px;
@@ -191,11 +197,21 @@
             font-size: 0.9rem;
             font-weight: 500;
             transition: 0.2s;
-            margin-top: 1rem;
+        }
+        .btn-profile:hover {
+            transform: translateY(-2px);
+        }
+        .btn-linkedin-profile {
+            background: #0077b5;
         }
         .btn-linkedin-profile:hover {
             background: #005f8a;
-            transform: translateY(-2px);
+        }
+        .btn-github-profile {
+            background: #333333;
+        }
+        .btn-github-profile:hover {
+            background: #1a1a1a;
         }
 
         .grid-2cols {
@@ -322,6 +338,7 @@
             .section-title { font-size: 1.5rem; }
             .profile-photo img { width: 150px; height: 150px; }
             .similar-card { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+            .profile-buttons { flex-direction: column; align-items: center; }
         }
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(18px); }
@@ -334,7 +351,7 @@
 <div class="container">
     <!-- Presentación principal -->
     <div class="hero">
-        <div class="badge"><i class="fas fa-laptop-code"></i> Estudiante de Ciencias de la Computación | UCSP</div>
+        <div class="badge"><i class="fas fa-laptop-code"></i> Estudiante de Ciencia de la Computación | UCSP</div>
         <h1>Carlos Saldivar</h1>
         <p>Carlos Santiago Saldivar Quispe · Universidad Católica San Pablo (UCSP) · Arequipa, Perú</p>
         <div class="divider"></div>
@@ -357,9 +374,13 @@
             <p><i class="fas fa-code"></i> Apasionado por la ciberseguridad, el desarrollo de software y las tecnologías emergentes. Disfruto el fútbol, la tecnología y la música como parte de mi día a día.</p>
         </div>
         
-        <div style="text-align: center; margin: 0.5rem 0 1rem 0;">
-            <a href="https://www.linkedin.com/in/carlos-saldivar-43872a336/?isSelfProfile=true" target="_blank" class="btn-linkedin-profile">
-                <i class="fab fa-linkedin"></i> Mi perfil de LinkedIn
+        <!-- Perfiles profesionales (LinkedIn y GitHub) -->
+        <div class="profile-buttons">
+            <a href="https://www.linkedin.com/in/carlos-saldivar-43872a336/?isSelfProfile=true" target="_blank" class="btn-profile btn-linkedin-profile">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/Santixdeo" target="_blank" class="btn-profile btn-github-profile">
+                <i class="fab fa-github"></i> GitHub
             </a>
         </div>
 
@@ -450,7 +471,6 @@
             <a href="https://fernandofrisancho.github.io/Fernando-Frisancho/" target="_blank">fernandofrisancho.github.io/Fernando-Frisancho/ <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i></a>
         </div>
 
-        <!-- NUEVO COMPAÑERO AGREGADO -->
         <div class="similar-card">
             <span><i class="fas fa-user"></i> David Renato Jesús Ríos Calvera</span>
             <a href="https://renatorioscalvera.github.io/David-Renato-Jesus-Rios-Calvera.github.io/" target="_blank">renatorioscalvera.github.io/David-Renato-Jesus-Rios-Calvera.github.io/ <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i></a>
@@ -459,7 +479,7 @@
 
     <!-- Footer -->
     <footer>
-        <p><i class="far fa-copyright"></i> Carlos Santiago Saldivar Quispe · Ciencias de la Computación · Universidad Católica San Pablo</p>
+        <p><i class="far fa-copyright"></i> Carlos Santiago Saldivar Quispe · Ciencia de la Computación · Universidad Católica San Pablo</p>
     </footer>
 </div>
 </body>
