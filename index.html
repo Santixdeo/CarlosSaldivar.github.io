@@ -178,6 +178,26 @@
             color: #d4af37;
         }
 
+        /* Enlace de LinkedIn más destacado */
+        .btn-linkedin-profile {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #0077b5;
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: 0.2s;
+            margin-top: 1rem;
+        }
+        .btn-linkedin-profile:hover {
+            background: #005f8a;
+            transform: translateY(-2px);
+        }
+
         .grid-2cols {
             display: flex;
             flex-wrap: wrap;
@@ -263,6 +283,32 @@
             box-shadow: 0 8px 25px rgba(0,0,0,0.4);
         }
 
+        /* Estilo para páginas similares */
+        .similar-card {
+            background: rgba(25, 25, 35, 0.8);
+            border-radius: 1.2rem;
+            padding: 1rem 1.2rem;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: 0.2s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .similar-card:hover {
+            border-color: rgba(212, 175, 55, 0.5);
+        }
+        .similar-card a {
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: 500;
+            word-break: break-all;
+        }
+        .similar-card a:hover {
+            text-decoration: underline;
+        }
+
         footer {
             text-align: center;
             margin-top: 2rem;
@@ -275,6 +321,7 @@
             .hero h1 { font-size: 2.3rem; }
             .section-title { font-size: 1.5rem; }
             .profile-photo img { width: 150px; height: 150px; }
+            .similar-card { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
         }
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(18px); }
@@ -293,11 +340,10 @@
         <div class="divider"></div>
     </div>
 
-    <!-- Tarjeta principal con foto única y descripción -->
+    <!-- Tarjeta principal: Sobre mí -->
     <div class="card">
         <div class="section-title"><i class="fas fa-user-graduate"></i> Sobre mí</div>
         
-        <!-- Foto única (NUEVA IMAGEN) -->
         <div class="profile-photo">
             <img src="https://i.imgur.com/SPxD5hB.jpeg" alt="Carlos Saldivar - Foto de perfil">
         </div>
@@ -311,6 +357,12 @@
             <p><i class="fas fa-code"></i> Apasionado por la ciberseguridad, el desarrollo de software y las tecnologías emergentes. Disfruto el fútbol, la tecnología y la música como parte de mi día a día.</p>
         </div>
         
+        <div style="text-align: center; margin: 0.5rem 0 1rem 0;">
+            <a href="https://www.linkedin.com/in/carlos-saldivar-43872a336/?isSelfProfile=true" target="_blank" class="btn-linkedin-profile">
+                <i class="fab fa-linkedin"></i> Mi perfil de LinkedIn
+            </a>
+        </div>
+
         <div class="tag-list">
             <span class="tag"><i class="fab fa-python"></i> Python</span>
             <span class="tag"><i class="fas fa-shield-alt"></i> Ciberseguridad</span>
@@ -318,7 +370,7 @@
             <span class="tag"><i class="fas fa-futbol"></i> Fútbol</span>
         </div>
 
-        <!-- Redes sociales dentro de Sobre mí -->
+        <!-- Redes sociales (TikTok, Instagram, Spotify) -->
         <div class="social-links">
             <a href="https://www.tiktok.com/@santixdeo" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
             <a href="https://www.instagram.com/aesantap/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
@@ -378,7 +430,34 @@
         </div>
     </div>
 
-    <!-- Footer solo con copyright -->
+    <!-- Páginas similares -->
+    <div class="card">
+        <div class="section-title"><i class="fas fa-users"></i> Páginas similares</div>
+        <p style="margin-bottom: 1rem; color: #b0b0c0;">Compañeros de la carrera que también tienen su página web personal:</p>
+        
+        <div class="similar-card">
+            <span><i class="fas fa-user"></i> César Paul André Champion Medrano</span>
+            <a href="https://cessar13.github.io/CesarChampion.github.io/" target="_blank">cessar13.github.io/CesarChampion.github.io/ <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i></a>
+        </div>
+
+        <div class="similar-card">
+            <span><i class="fas fa-user"></i> Diego Alonso Aragón Mamani</span>
+            <a href="https://diegoalonsoaragonmamani.github.io/DiegoAlonsoAragonMamani/" target="_blank">diegoalonsoaragonmamani.github.io/DiegoAlonsoAragonMamani/ <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i></a>
+        </div>
+
+        <div class="similar-card">
+            <span><i class="fas fa-user"></i> Fernando Frisancho</span>
+            <a href="https://fernandofrisancho.github.io/Fernando-Frisancho/" target="_blank">fernandofrisancho.github.io/Fernando-Frisancho/ <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i></a>
+        </div>
+
+        <!-- NUEVO COMPAÑERO AGREGADO -->
+        <div class="similar-card">
+            <span><i class="fas fa-user"></i> David Renato Jesús Ríos Calvera</span>
+            <a href="https://renatorioscalvera.github.io/David-Renato-Jesus-Rios-Calvera.github.io/" target="_blank">renatorioscalvera.github.io/David-Renato-Jesus-Rios-Calvera.github.io/ <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i></a>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer>
         <p><i class="far fa-copyright"></i> Carlos Santiago Saldivar Quispe · Ciencias de la Computación · Universidad Católica San Pablo</p>
     </footer>
